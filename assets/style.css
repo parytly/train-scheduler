@@ -1,3 +1,10 @@
+.card-title{
+    font-size: 100px;
+    text-shadow: 5px 3px black;
+}
+.card-text{
+    font-size: 25px;
+}
 .table-container{
     margin: 15px;
     padding: 5px;   

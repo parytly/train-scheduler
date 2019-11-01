@@ -10,24 +10,27 @@
 
     <!-- LOCAL CSS  -->
     <link rel="stylesheet" href="assets/style.css">
-    <!-- Firebase References -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-   <!-- JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>   
- 
-
+  
+ <!-- Moment JS -->
+ <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>  
+<!-- Firebase References -->
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
   <title>ChooChoo</title>
   </head>
   <body>
       <!-- JUMBOTRON  -->
-    <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-          <h1 class="display-4">Train Schedule</h1>
-          <p class="lead"></p>
+      <div class="card bg-dark text-white text-center">
+          <img src="./assets/images/train.jpg" class="card-img" alt="...">
+          <div class="card-img-overlay">
+            <h1 class="card-title">Train Schedule</h1>
+            <p class="card-text">Enter in your train's name to find out the next schedule time.</p>
+          </div>
         </div>
-      </div>
+
         <!-- TABLE  -->
     <div class = "table-container"> 
       <table class="table">
@@ -51,27 +54,30 @@
       <!-- INPUT FIELD -->
     <div class = "form-container">
       <form>
+        <!-- TRAIN NAME INPUT -->
         <div class="form-group1">
-                <label for="trainInput">Train Name</label>
-                <input type="text" class="form-control" id="trainInput" placeholder="Train Name">
-                </div>
-        <div class="form-group">
-        <label for="destinationInput">Destination</label>
-        <input type="text" class="form-control" id="destinationInput" placeholder="Where do you want to you?">
+          <label for="trainInput">Train Name</label>
+          <input type="text" class="form-control" id="trainInput" placeholder="Train Name">
         </div>
+        <!-- DESTINATION INPUT -->
         <div class="form-group">
-            <label for="trainTime">First Train Time (Military Time HH:MM)</label>
-            <input type="text" class="form-control" id="trainTime" placeholder="Military time (HH:MM)">
+          <label for="destinationInput">Destination</label>
+          <input type="text" class="form-control" id="destinationInput" placeholder="Where do you want to you?">
         </div>
+        <!-- FIRST TRAIN TIME INPUT -->
+        <div class="form-group">
+            <label for="firstTrainTimeInput">First Train Time (Military Time HH:MM)</label>
+            <input type="text" class="form-control" id="firstTrainTimeInput" placeholder="Military time (HH:MM)">
+        </div>
+        <!-- FREQUENCY INPUT -->
         <div class="form-group">
             <label for="frequencyInput">Frequency (mins)</label>
-            <input type="text" class="form-control" id="frequencyInput" placeholder="minutes">
+            <input type="text" class="form-control" id="frequencyInput" placeholder="Minutes">
         </div>
         <!-- SUBMIT BUTTON -->
         <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+      </form>
     </div>
-    <div id ="hey"></div>
      <!-- LOCAL JavaScript -->
   <script src="assets/train.js"></script>
   </body>
